@@ -2,11 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import {GrocerDBService} from '../services/grocerDB.service';
 
-export interface filmDetail {
-  film_id: number;
-  title: string;
-  rating: string;
-}
 
 @Component({
   selector: 'app-finditem',
@@ -15,7 +10,7 @@ export interface filmDetail {
 })
 export class FinditemComponent implements OnInit {
 
-  item={};
+  item = {};
 
   @Output()
   // albumAdded = new EventEmitter<string>();
@@ -28,17 +23,18 @@ export class FinditemComponent implements OnInit {
   }
 
   searchItem(form: NgForm) {
-    const brand = "%"+form.value.brand+"%";
+    const brand = '%' + form.value.brand + '%';
+    const name = '%' + form.value.pdname + '%';
 
-    this.grocerdbsvc.getItem("0","50",brand)
-    .then((results)=>{
+    this.grocerdbsvc.getItem('0', '50', brand, name)
+    .then((results) => {
       this.item = results;
-    })
+    });
 
-    console.log(">>>>>", brand);
-    
+    console.log('>>>>>', brand);
+
     this.itemList.emit(this.item);
-      
-    console.log("*Loggin this  ", this.item);
+
+    console.log('*Loggin this  ', this.item);
   }
 }

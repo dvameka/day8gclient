@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
 
-
+/*
 export interface itemList {
   id: number;
   brand: string;
-  name: string
+  name: string;
 }
+*/
 
 @Component({
   selector: 'app-root',
@@ -14,27 +15,23 @@ export interface itemList {
 })
 export class AppComponent {
   title = 'day8 Grocer Client';
-  itemResult:string[];
+  itemResult: string[];
 
-  myItemList: itemList[];
+  // myItemList: itemList[];
 
   @Input()
   item: any;
 
-  
+
   @Output()
-  //passResult = new EventEmitter();
-  
 
- 
   propagateList(item: any) {
-    console.log (">>> Items Found: ", item);     
+    console.log ('>>> Items Found: ', item);
 
-    this.itemResult=Object.values(item);
+    this.itemResult = Object.values(item);
 
-    console.log(">> this.itemResult<< ", this.itemResult);
+    console.log('>> this.itemResult<< ', this.itemResult);
 
-  //  return this.filmResult;
     }
 
 }

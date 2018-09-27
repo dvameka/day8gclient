@@ -14,8 +14,7 @@ export class ListitemComponent implements OnInit {
 
 
   @Input()
-  //filmResult : string[]; 
-  passResult : string[];
+  passResult: string[];
 
   constructor() { }
 
