@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar color="primary">
+  Find Big Grocer Database
+</mat-toolbar>
+
+<app-finditem (itemList)="propagateList($event)"></app-finditem>
+<app-listitem [passResult]="itemResult"></app-listitem>
+
