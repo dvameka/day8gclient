@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-//added by me
+
 import {FormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -31,7 +31,7 @@ import { GrocerDBService } from './services/grocerDB.service';
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
-  providers: [GrocerDBService], //added here
+  providers: [GrocerDBService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

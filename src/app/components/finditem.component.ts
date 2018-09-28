@@ -24,9 +24,9 @@ export class FinditemComponent implements OnInit {
 
   searchItem(form: NgForm) {
     const brand = '%' + form.value.brand + '%';
-    const name = '%' + form.value.pdname + '%';
+    const pdname = '%' + form.value.pdname + '%';
 
-    this.grocerdbsvc.getItem('0', '50', brand, name)
+    this.grocerdbsvc.getItem('0', '50', brand, pdname)
     .then((results) => {
       this.item = results;
     });

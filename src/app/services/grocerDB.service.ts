@@ -11,13 +11,14 @@ export class GrocerDBService {
 
   constructor(private http: HttpClient) { }
 
-  getItem(offset = '0', limit = '50', brand, name): Promise<any> {
+  getItem(offset = '0', limit = '50', brand, pdname): Promise<any> {
 
     const qs = new HttpParams()
       .set('offset' , offset)
       .set('limit' , limit)
       .set('brand', brand)
-      .set('name', name);
+      .set('pdname', pdname); // looks fine here
+
     return (
       this.http.get('http://localhost:3000/grocery', {params: qs})
         .pipe(take(1)).toPromise()

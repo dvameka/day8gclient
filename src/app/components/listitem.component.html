@@ -17,8 +17,8 @@
     <div class="container" fxLayout="row" fxLayoutAlign="start" *ngFor="let i of passResult">
       <mat-card>
         <div fxFlex=30%>{{ i.brand }}</div>
-        <div fxFlex=50%>{{ i.name }}</div>
-        <div fxFlex=20%><form method="get" action="http://localhost:3000/grocer/{{i.id}}"><button>Edit</button></form></div>
+        <div fxFlex=50%>{{ i.pdname }}</div>
+        <div fxFlex=20%><form method="get" action="http://localhost:4200/grocery/{{i.id}}"><button>Edit</button></form></div>
       </mat-card>
     </div>
   
